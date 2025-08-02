@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import { AlertTriangle, Shield, Eye, Database, Globe, TrendingUp, Users, BookOpen } from 'lucide-react'
+import { GlowingEffect } from '@/components/ui/glowing-effect'
 
 export default function Privacy() {
   const [activeTab, setActiveTab] = useState(0)
@@ -163,7 +164,16 @@ export default function Privacy() {
         </div>
 
         {/* Educational Content Tabs */}
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+        <div className="relative h-full rounded-[1.5rem] border-[0.75px] border-border p-2">
+          <GlowingEffect
+            spread={40}
+            glow={true}
+            disabled={false}
+            proximity={64}
+            inactiveZone={0.01}
+            borderWidth={3}
+          />
+          <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl border-[0.75px] bg-white shadow-2xl">
           {/* Tab Navigation */}
           <div className="flex flex-col sm:flex-row border-b border-gray-200">
             {educationTabs.map((tab, index) => (
@@ -203,6 +213,7 @@ export default function Privacy() {
                 ))}
               </div>
             </div>
+          </div>
           </div>
         </div>
 

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react'
 import { Check, X, AlertTriangle, Shield, Eye, Users, Smartphone } from 'lucide-react'
+import { GlowingEffect } from '@/components/ui/glowing-effect'
 
 export default function Comparison() {
   const [selectedApp, setSelectedApp] = useState('soulvia')
@@ -239,7 +240,16 @@ export default function Comparison() {
         </div>
 
         {/* Detailed Comparison Table */}
-        <div className="bg-white rounded-3xl shadow-2xl overflow-hidden">
+        <div className="relative h-full rounded-[1.5rem] border-[0.75px] border-border p-2">
+          <GlowingEffect
+            spread={40}
+            glow={true}
+            disabled={false}
+            proximity={64}
+            inactiveZone={0.01}
+            borderWidth={3}
+          />
+          <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl border-[0.75px] bg-white shadow-2xl">
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead className="bg-gray-50">
@@ -277,6 +287,7 @@ export default function Comparison() {
                 ))}
               </tbody>
             </table>
+          </div>
           </div>
         </div>
 

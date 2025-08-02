@@ -16,6 +16,7 @@ import {
   Heart
 } from 'lucide-react'
 import { DatabaseDemo } from '@/components/ui/database-demo'
+import { GlowingEffect } from '@/components/ui/glowing-effect'
 
 export default function Features() {
   const [activeFeature, setActiveFeature] = useState(0)
@@ -154,7 +155,17 @@ export default function Features() {
 
           {/* Feature Details */}
           <div className="lg:sticky lg:top-8">
-            <div className="card p-8">
+            <div className="relative h-full rounded-[1.5rem] border-[0.75px] border-border p-2">
+              <GlowingEffect
+                spread={40}
+                glow={true}
+                disabled={false}
+                proximity={64}
+                inactiveZone={0.01}
+                borderWidth={3}
+              />
+              <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl border-[0.75px] bg-background p-8 shadow-sm"
+                   style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)' }}>
               <div className="mb-6">
                 <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${features[activeFeature].color} shadow-lg mb-4`}>
                   {React.createElement(features[activeFeature].icon, { 
@@ -183,6 +194,7 @@ export default function Features() {
                 <button className="btn-primary w-full">
                   Try {features[activeFeature].title}
                 </button>
+              </div>
               </div>
             </div>
           </div>

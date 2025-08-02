@@ -11,7 +11,8 @@ export default function Footer() {
     { name: '3D Experience', href: '/3d-experience' },
     { name: 'Spline Demo', href: '/spline-demo' },
     { name: 'Interactive 3D', href: '/interactive-3d' },
-    { name: 'RevealText Demo', href: '/reveal-text-demo' },
+            { name: 'RevealText Demo', href: '/reveal-text-demo' },
+        { name: 'Glowing Cards Demo', href: '/glowing-demo' },
     { name: 'Roadmap', href: '/roadmap' },
     { name: 'Database Demo', href: '/database-demo' }
   ]

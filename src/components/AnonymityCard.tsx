@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { EyeOff } from 'lucide-react';
+import { GlowingEffect } from '@/components/ui/glowing-effect';
 
 const AnonymityCard = () => {
   const features = [
@@ -24,7 +25,17 @@ const AnonymityCard = () => {
   ];
 
   return (
-    <div className="max-w-sm mx-auto bg-gradient-to-br from-slate-800 to-slate-900 rounded-3xl p-8 shadow-2xl border border-slate-700">
+    <div className="max-w-sm mx-auto">
+      <div className="relative h-full rounded-[1.5rem] border-[0.75px] border-border p-2">
+        <GlowingEffect
+          spread={40}
+          glow={true}
+          disabled={false}
+          proximity={64}
+          inactiveZone={0.01}
+          borderWidth={3}
+        />
+        <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl border-[0.75px] bg-gradient-to-br from-slate-800 to-slate-900 p-8 shadow-2xl">
       {/* Icon */}
       <div className="flex justify-center mb-6">
         <div className="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
@@ -74,6 +85,8 @@ const AnonymityCard = () => {
       <button className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-[1.02] hover:shadow-lg">
         Try True Anonymity 尝试真正的匿名
       </button>
+        </div>
+      </div>
     </div>
   );
 }

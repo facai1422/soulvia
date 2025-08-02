@@ -28,9 +28,8 @@ export default function RevealTextDemoPage() {
       </div>
       
       <div className="text-center text-white/80 max-w-2xl mx-auto px-4">
-        <p className="text-xl mb-4">悬停在字母上查看图片效果</p>
+        <p className="text-xl mb-4"></p>
         <p className="text-sm text-white/60">
-          每个字母都有独特的弹簧动画效果，悬停时显示不同的背景图片，还有红色扫描动画
         </p>
       </div>
       
