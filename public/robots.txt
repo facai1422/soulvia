@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://soulvia.com/sitemap.xml
+
+# High crawl delay for privacy
+Crawl-delay: 1
