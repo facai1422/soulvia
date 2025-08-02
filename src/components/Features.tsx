@@ -123,28 +123,28 @@ export default function Features() {
         </div>
 
         {/* Main Features Grid */}
-        <div className="grid lg:grid-cols-2 gap-12 items-start mb-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start mb-16 sm:mb-20">
           {/* Feature List */}
-          <div className="space-y-4">
+          <div className="space-y-3 sm:space-y-4">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className={`p-6 rounded-2xl cursor-pointer transition-all duration-300 border-2 ${
+                className={`p-4 sm:p-6 rounded-2xl cursor-pointer transition-all duration-300 border-2 ${
                   activeFeature === index
                     ? 'bg-white shadow-xl border-primary-200'
                     : 'bg-gray-50/50 hover:bg-white border-transparent hover:shadow-lg'
                 }`}
                 onClick={() => setActiveFeature(index)}
               >
-                <div className="flex items-start space-x-4">
-                                  <div className={`p-3 rounded-xl bg-gradient-to-r ${feature.color} shadow-lg`}>
-                  {React.createElement(feature.icon, { className: "w-6 h-6 text-white" })}
+                <div className="flex items-start space-x-3 sm:space-x-4">
+                                  <div className={`p-2 sm:p-3 rounded-xl bg-gradient-to-r ${feature.color} shadow-lg`}>
+                  {React.createElement(feature.icon, { className: "w-5 h-5 sm:w-6 sm:h-6 text-white" })}
                 </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-semibold text-dark-900 mb-2">
+                    <h3 className="text-lg sm:text-xl font-semibold text-dark-900 mb-1 sm:mb-2">
                       {feature.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -164,34 +164,34 @@ export default function Features() {
                 inactiveZone={0.01}
                 borderWidth={3}
               />
-              <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl border-[0.75px] bg-background p-8 shadow-sm"
+              <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-xl border-[0.75px] bg-background p-4 sm:p-6 lg:p-8 shadow-sm"
                    style={{ backgroundColor: 'rgba(255, 255, 255, 0.95)' }}>
-              <div className="mb-6">
-                <div className={`inline-flex p-4 rounded-2xl bg-gradient-to-r ${features[activeFeature].color} shadow-lg mb-4`}>
+              <div className="mb-4 sm:mb-6">
+                <div className={`inline-flex p-3 sm:p-4 rounded-2xl bg-gradient-to-r ${features[activeFeature].color} shadow-lg mb-3 sm:mb-4`}>
                   {React.createElement(features[activeFeature].icon, { 
-                    className: "w-8 h-8 text-white" 
+                    className: "w-6 h-6 sm:w-8 sm:h-8 text-white" 
                   })}
                 </div>
-                <h3 className="text-2xl font-bold text-dark-900 mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold text-dark-900 mb-2 sm:mb-3">
                   {features[activeFeature].title}
                 </h3>
-                <p className="text-gray-600 text-lg leading-relaxed">
+                <p className="text-gray-600 text-base sm:text-lg leading-relaxed">
                   {features[activeFeature].description}
                 </p>
               </div>
 
-              <div className="space-y-3">
-                <h4 className="font-semibold text-dark-800 mb-4">Key Features:</h4>
+              <div className="space-y-2 sm:space-y-3">
+                <h4 className="font-semibold text-dark-800 mb-3 sm:mb-4 text-sm sm:text-base">Key Features:</h4>
                 {features[activeFeature].details.map((detail, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <div className="w-2 h-2 bg-primary-500 rounded-full"></div>
-                    <span className="text-gray-700">{detail}</span>
+                  <div key={index} className="flex items-center space-x-2 sm:space-x-3">
+                    <div className="w-2 h-2 bg-primary-500 rounded-full flex-shrink-0"></div>
+                    <span className="text-gray-700 text-sm sm:text-base">{detail}</span>
                   </div>
                 ))}
               </div>
 
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <button className="btn-primary w-full">
+              <div className="mt-6 sm:mt-8 pt-4 sm:pt-6 border-t border-gray-200">
+                <button className="btn-primary w-full text-sm sm:text-base py-3 sm:py-4">
                   Try {features[activeFeature].title}
                 </button>
               </div>

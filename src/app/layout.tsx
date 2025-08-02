@@ -73,7 +73,7 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <meta name="theme-color" content="#0ea5e9" />
       </head>
-      <body className="font-sans antialiased bg-white dark:bg-dark-900">
+      <body className="font-sans antialiased bg-white dark:bg-dark-900 mobile-scroll">
         <StructuredData />
         {children}
       </body>

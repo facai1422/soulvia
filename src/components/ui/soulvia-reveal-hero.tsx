@@ -85,15 +85,15 @@ export function SoulviaRevealHero({
           
           {/* RevealText SOULVIA - Main Brand */}
           <div className="mb-8 md:mb-12">
-            <RevealText
-              text="SOULVIA"
-              textColor="text-white"
-              overlayColor="text-rose-500"
-              fontSize="text-[60px] sm:text-[100px] md:text-[140px] lg:text-[180px]"
-              letterDelay={0.1}
-              overlayDelay={0.06}
-              overlayDuration={0.5}
-              springDuration={800}
+                                    <RevealText
+                          text="SOULVIA"
+                          textColor="text-white"
+                          overlayColor="text-rose-500"
+                          fontSize="text-[45px] xs:text-[55px] sm:text-[80px] md:text-[120px] lg:text-[160px] xl:text-[180px]"
+                          letterDelay={0.1}
+                          overlayDelay={0.06}
+                          overlayDuration={0.5}
+                          springDuration={800}
               letterImages={[
                 "https://images.unsplash.com/photo-1518837695005-2083093ee35b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80", // S - Ocean
                 "https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80", // O - Mountains
@@ -107,13 +107,13 @@ export function SoulviaRevealHero({
           </div>
 
           {/* Subtitle */}
-          <motion.div
-            custom={1}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <h2 className="text-2xl sm:text-4xl md:text-6xl font-bold mb-6 md:mb-8 tracking-tight">
+                                <motion.div
+                        custom={1}
+                        variants={fadeUpVariants}
+                        initial="hidden"
+                        animate="visible"
+                      >
+                        <h2 className="text-xl xs:text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 md:mb-8 tracking-tight">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-white to-white/80">
                 {title1}
               </span>
@@ -125,40 +125,40 @@ export function SoulviaRevealHero({
           </motion.div>
 
           {/* Description */}
-          <motion.div
-            custom={2}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
-          >
-            <p className="text-base sm:text-lg md:text-xl text-white/60 mb-8 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-4">
+                                <motion.div
+                        custom={2}
+                        variants={fadeUpVariants}
+                        initial="hidden"
+                        animate="visible"
+                      >
+                        <p className="text-sm xs:text-base sm:text-lg md:text-xl text-white/60 mb-6 sm:mb-8 leading-relaxed font-light tracking-wide max-w-2xl mx-auto px-2 sm:px-4">
               Experience true digital freedom with anonymous communication. 
               Share your authentic thoughts without fear, powered by military-grade encryption.
             </p>
           </motion.div>
 
           {/* CTA Buttons */}
-          <motion.div
-            custom={3}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
-            className="flex flex-col sm:flex-row gap-4 justify-center items-center"
-          >
-            <a 
-              href="https://apps.apple.com/us/app/soulvia/id6745585268?l=zh-Hans-CN"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-4 bg-gradient-to-r from-rose-500 to-indigo-500 text-white font-semibold rounded-xl hover:from-rose-600 hover:to-indigo-600 transition-all duration-300 shadow-lg hover:shadow-xl"
-            >
-              Download Soulvia App
-            </a>
-            <a 
-              href="/reveal-text-demo"
-              className="inline-block px-8 py-4 bg-white/10 backdrop-blur-sm text-white font-semibold rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300"
-            >
-              View Animation Demo
-            </a>
+                                <motion.div
+                        custom={3}
+                        variants={fadeUpVariants}
+                        initial="hidden"
+                        animate="visible"
+                        className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center px-4"
+                      >
+                        <a 
+                          href="https://apps.apple.com/us/app/soulvia/id6745585268?l=zh-Hans-CN"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="w-full sm:w-auto inline-block px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-rose-500 to-indigo-500 text-white font-semibold text-sm sm:text-base rounded-xl hover:from-rose-600 hover:to-indigo-600 transition-all duration-300 shadow-lg hover:shadow-xl text-center"
+                        >
+                          Download Soulvia App
+                        </a>
+                        <a 
+                          href="/reveal-text-demo"
+                          className="w-full sm:w-auto inline-block px-6 sm:px-8 py-3 sm:py-4 bg-white/10 backdrop-blur-sm text-white font-semibold text-sm sm:text-base rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300 text-center"
+                        >
+                          View Animation Demo
+                        </a>
           </motion.div>
 
 

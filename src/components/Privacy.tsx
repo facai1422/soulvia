@@ -117,26 +117,26 @@ export default function Privacy() {
   ]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-red-100 text-red-700 rounded-full font-medium mb-4">
-            <AlertTriangle className="w-4 h-4 mr-2" />
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-red-100 text-red-700 rounded-full font-medium mb-3 sm:mb-4 text-sm">
+            <AlertTriangle className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
             Digital Privacy Crisis
           </div>
-          <h2 className="text-4xl lg:text-5xl font-display font-bold text-dark-900 mb-6">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-dark-900 mb-4 sm:mb-6">
             Your Privacy Is 
             <span className="gradient-text"> Under Attack</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             Every day, billions of private messages are intercepted, stored, and analyzed. 
             Here's what you need to know to protect yourself.
           </p>
         </div>
 
         {/* Privacy Threats Statistics */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 mb-16 sm:mb-20">
           {privacyThreats.map((threat, index) => {
             // Assign different text colors for different cards
             const textColors = [

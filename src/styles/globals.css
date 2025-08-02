@@ -309,6 +309,56 @@
   animation: spotlight 2s ease .75s 1 forwards;
 }
 
+/* Mobile Touch Optimization */
+@media (hover: hover) and (pointer: fine) {
+  /* Desktop hover states */
+  .hover-desktop:hover {
+    transform: scale(1.02);
+  }
+}
+
+@media (hover: none) and (pointer: coarse) {
+  /* Mobile touch optimizations */
+  .touch-target {
+    min-height: 44px;
+    min-width: 44px;
+  }
+  
+  /* Remove hover effects on mobile */
+  .no-touch-hover:hover {
+    transform: none !important;
+    background-color: inherit !important;
+  }
+  
+  /* Enhance tap feedback */
+  .tap-feedback:active {
+    transform: scale(0.98);
+    opacity: 0.8;
+  }
+  
+  /* Improve scroll performance */
+  .mobile-scroll {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+  }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-pulse-slow,
+  .animate-bounce,
+  .animate-spotlight {
+    animation: none;
+  }
+  
+  .transition-all,
+  .transition-transform,
+  .transition-opacity {
+    transition: none;
+  }
+}
+
 
 
 @layer base {

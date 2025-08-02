@@ -197,43 +197,43 @@ export default function Comparison() {
   }
 
   return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+    <section className="py-16 sm:py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         {/* Section Header */}
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full font-medium mb-4">
-            <Eye className="w-4 h-4 mr-2" />
+        <div className="text-center mb-12 sm:mb-16">
+          <div className="inline-flex items-center px-3 sm:px-4 py-2 bg-yellow-100 text-yellow-700 rounded-full font-medium mb-3 sm:mb-4 text-sm">
+            <Eye className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
             Honest Comparison
           </div>
-          <h2 className="text-4xl lg:text-5xl font-display font-bold text-dark-900 mb-6">
+          <h2 className="text-2xl xs:text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-dark-900 mb-4 sm:mb-6">
             How Soulvia Compares to 
             <span className="gradient-text"> Popular Apps</span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto px-4">
             We believe in transparency. Here's an honest comparison of privacy and anonymity features 
             across popular messaging platforms.
           </p>
         </div>
 
         {/* App Selection */}
-        <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 sm:gap-4 mb-8 sm:mb-12">
           {apps.map((app) => (
             <button
               key={app.id}
               onClick={() => setSelectedApp(app.id)}
-              className={`p-6 rounded-2xl border-2 transition-all duration-300 ${
+              className={`p-4 sm:p-6 rounded-2xl border-2 transition-all duration-300 ${
                 selectedApp === app.id
                   ? `${app.bgColor} ${app.color.replace('bg-', 'border-')} shadow-lg`
                   : 'bg-white border-gray-200 hover:border-gray-300 hover:shadow-md'
               }`}
             >
-              <div className={`w-12 h-12 ${app.color} rounded-xl flex items-center justify-center mx-auto mb-3`}>
-                {React.createElement(app.logo, { className: "w-6 h-6 text-white" })}
+              <div className={`w-10 h-10 sm:w-12 sm:h-12 ${app.color} rounded-xl flex items-center justify-center mx-auto mb-2 sm:mb-3`}>
+                {React.createElement(app.logo, { className: "w-5 h-5 sm:w-6 sm:h-6 text-white" })}
               </div>
-              <h3 className={`font-semibold mb-1 ${selectedApp === app.id ? app.textColor : 'text-dark-900'}`}>
+              <h3 className={`font-semibold mb-1 text-sm sm:text-base ${selectedApp === app.id ? app.textColor : 'text-dark-900'}`}>
                 {app.name}
               </h3>
-              <p className="text-sm text-gray-500 mb-2">{app.users} users</p>
+              <p className="text-xs sm:text-sm text-gray-500 mb-1 sm:mb-2">{app.users} users</p>
               <p className="text-xs text-gray-400">{app.focus}</p>
             </button>
           ))}
