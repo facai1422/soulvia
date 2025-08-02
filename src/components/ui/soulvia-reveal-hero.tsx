@@ -161,18 +161,7 @@ export function SoulviaRevealHero({
             </a>
           </motion.div>
 
-          {/* Hint text */}
-          <motion.div
-            custom={4}
-            variants={fadeUpVariants}
-            initial="hidden"
-            animate="visible"
-            className="mt-12"
-          >
-            <p className="text-white/40 text-sm">
-              ✨ 悬停在 SOULVIA 字母上查看图片效果
-            </p>
-          </motion.div>
+
         </div>
       </div>
 
